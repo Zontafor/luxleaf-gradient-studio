@@ -613,6 +613,7 @@
   "typeDeclarationBase": "Pinned source component and option types; published 2.4.20 for stable auxiliary exports",
   "relocations": {
     ".github/workflows/playwright.yml": ".luxleaf/upstream-workflows/playwright.yml",
-    ".github/workflows/deploy.yml": ".luxleaf/upstream-workflows/deploy.yml"
+    ".github/workflows/deploy.yml": ".luxleaf/upstream-workflows/deploy.yml",
+    "README.md": "UPSTREAM.md"
   }
 }
