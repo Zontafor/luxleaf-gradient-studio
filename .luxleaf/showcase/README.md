@@ -39,4 +39,4 @@ node node_modules/typescript/bin/tsc -p .luxleaf/showcase/tsconfig.json
 node apps/example-vue-dev/node_modules/vite/bin/vite.js build --config .luxleaf/showcase/vite.config.mjs
 ```
 
-The recorded media and this application remain in the private repository. No package or public media host is required. Upstream licenses and notices remain in force for the renderer.
+The recorded media and this application are available in the public repository. Run the showcase locally; no new registry package is published by making the source public. Upstream licenses and notices remain in force for the renderer.

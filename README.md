@@ -17,7 +17,7 @@ Three LuxLeaf palette studies, recorded directly from the live Vue canvas at 960
 
 The original [README](UPSTREAM.md), [animated introduction](assets/intro.gif) and [Vue example screenshot](.luxleaf/images/vue-example.jpg) remain available.
 
-The complete restored monorepo is now on private `main`, with its original workspace names and license notices. The previously published `@zontafor/luxleaf-gradient-studio` package is a separate earlier implementation; its [historical package guide](https://github.com/Zontafor/luxleaf-gradient-studio/blob/1f46ad51c6bc60b5356b4da2607e930788b3ac8b/README.md) remains at that revision. This restoration does not publish a new registry package.
+The complete restored monorepo is available on public `main`, with its original workspace names and license notices. The previously published `@zontafor/luxleaf-gradient-studio` package is a separate earlier implementation; its [historical package guide](https://github.com/Zontafor/luxleaf-gradient-studio/blob/1f46ad51c6bc60b5356b4da2607e930788b3ac8b/README.md) remains at that revision. This restoration does not publish a new registry package.
 
 ## Quick start
 
