@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "scope": "local verification of pinned upstream tree",
+  "scope": "Pinned source verification, local builds, and hosted Chromium functional checks",
   "modifiedUpstreamFiles": 3,
   "sourceFiles": 606,
   "passedBuilds": [
@@ -15,10 +15,26 @@
   "browser": "Original Vue example rendered; Universe preset changes shape, colors, speed and grain",
   "failedBuilds": [],
   "notVerified": [
-    "Nuxt runtime on local Node 24.2 (requires >=24.11)",
-    "Original upstream browser suite pending CI",
-    "Framer/Figma host integration",
+    "Framer/Figma editor-host integration",
+    "Real mobile devices and browsers other than Chromium",
+    "Hardware performance budgets",
     "Fresh registry publication of this faithful tree"
   ],
-  "browserCI": "CI 41338705588: standalone Vue/Nuxt and Nuxt development targets passed; Vue development exhausted its 45-second screenshot assertion budget. Hosted software-rendering varies substantially. Retain assertions/viewports and use explicit CI functional budgets of 600 seconds per test and 120 seconds per assertion; this is not a performance claim. New run pending."
+  "browserCI": {
+    "status": "passed",
+    "run": "https://github.com/Zontafor/luxleaf-gradient-studio/actions/runs/41339892699",
+    "testedCommit": "503fd6cf1eaaca22a8d6935f020f52c7d487318a",
+    "passed": 39,
+    "targetSpecificSkips": 41,
+    "targets": [
+      "vue-library",
+      "vue-dev",
+      "nuxt-dev",
+      "vue-standalone",
+      "nuxt-standalone"
+    ],
+    "viewports": "Original desktop and mobile-sized Chromium projects",
+    "assertions": "Original assertions and pixel thresholds unchanged",
+    "limits": "CI permits 600 seconds per test and 120 seconds per assertion; functional verification, not performance certification"
+  }
 }

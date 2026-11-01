@@ -8,14 +8,14 @@
 
 *Actual local run of the original Vue application. The original [README](UPSTREAM.md) and [animated introduction](assets/intro.gif) remain available.*
 
-This guide covers the restored monorepo on `faithful-upstream` in [PR #1](https://github.com/Zontafor/luxleaf-gradient-studio/pull/1). It retains upstream workspace names. For the published `@zontafor/luxleaf-gradient-studio` package, use the [main-branch guide](https://github.com/Zontafor/luxleaf-gradient-studio/blob/main/README.md).
+The complete restored monorepo is now on private `main`, with its original workspace names and license notices. The previously published `@zontafor/luxleaf-gradient-studio` package is a separate earlier implementation; its [historical package guide](https://github.com/Zontafor/luxleaf-gradient-studio/blob/1f46ad51c6bc60b5356b4da2607e930788b3ac8b/README.md) remains at that revision. This restoration does not publish a new registry package.
 
 ## Quick start
 
 Use Node 24.11+ for the Nuxt applications and pnpm 10.12.4 for this workspace.
 
 ```sh
-git clone --branch faithful-upstream https://github.com/Zontafor/luxleaf-gradient-studio.git
+git clone https://github.com/Zontafor/luxleaf-gradient-studio.git
 cd luxleaf-gradient-studio
 pnpm install --frozen-lockfile --ignore-scripts
 pnpm --filter @shadergradient/react --filter @shadergradient/vue build
@@ -91,6 +91,8 @@ pnpm --filter ui build
 pnpm --filter @shadergradient/figma-plugin plugin:build
 pnpm --filter @shadergradient/framer-plugin --filter example-vue-dev build
 ```
+
+All five Chromium browser jobs passed at `503fd6c`: 39 passing cases and 41 target-specific skips, with unchanged assertions and viewports. Hosted CI uses longer functional test budgets; this is not a hardware performance benchmark.
 
 The original [browser-suite guide](tests/browser/README.md) explains separate end-to-end checks. [Recorded build verification](.luxleaf/verification.json) and [current GitHub runs](https://github.com/Zontafor/luxleaf-gradient-studio/actions) show their scope. The Next.js example now passes its production build, including lint and type checking. Two small source corrections and the browser-test configuration change are explicitly recorded in the source manifest; original file bytes are retained under `.luxleaf/originals/`.
 
