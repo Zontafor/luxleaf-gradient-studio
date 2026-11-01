@@ -32,7 +32,8 @@ const apps = [
 export default defineConfig({
   testDir: './tests/browser',
   workers: 1,
-  timeout: 120000,
+  // Software-rendered desktop frames can take tens of seconds on hosted CI.
+  timeout: process.env.CI ? 300000 : 120000,
   expect: { timeout: 45000 },
   reporter: 'list',
   use: {
@@ -72,6 +73,7 @@ export default defineConfig({
           ),
           url: `http://localhost:${port}`,
           reuseExistingServer: false,
-          timeout: 120000,
+          // Software-rendered desktop frames can take tens of seconds on hosted CI.
+  timeout: process.env.CI ? 300000 : 120000,
         })),
 })

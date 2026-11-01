@@ -18,6 +18,10 @@ jobs:
   browser-tests:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [vue-library, vue-dev, nuxt-dev, vue-standalone, nuxt-standalone]
     steps:
       - uses: actions/checkout@v4
 
@@ -53,14 +57,17 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm exec playwright install chromium
 
-      - name: Run browser tests
-        run: pnpm test:e2e
+      - name: Prepare original browser packages
+        run: pnpm prepare:e2e
+
+      - name: Run desktop and mobile browser tests
+        run: pnpm exec playwright test --project=${{ matrix.target }} --project=${{ matrix.target }}-mobile
 
       - name: Upload failure screenshots and traces
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-results
+          name: playwright-results-${{ matrix.target }}
           path: test-results/
           if-no-files-found: ignore
           retention-days: 14

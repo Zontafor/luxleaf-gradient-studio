@@ -629,8 +629,8 @@
     },
     "playwright.config.ts": {
       "original": ".luxleaf/originals/playwright.config.ts",
-      "sha256": "c500b70d36fd49abe8dd6f8947b68742f53ed63f71e622b4316facb54a779bc5",
-      "reason": "Keep every visual assertion and viewport. Disable continuous trace-filmstrip GPU readbacks and allow bounded extra time on software-rendered CI; failure screenshots, DOM snapshots and source traces remain enabled."
+      "sha256": "23c1e0d4357d63a851835574f7e8f016d94f42e6dd77b4a010b5320f2ba2bb88",
+      "reason": "Retain original assertions and viewports; remove competing trace filmstrip captures and allow 300 seconds per functional test on software-rendered CI (120 seconds locally). CI targets run in independent jobs."
     }
   }
 }

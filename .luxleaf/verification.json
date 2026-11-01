@@ -20,5 +20,5 @@
     "Framer/Figma host integration",
     "Fresh registry publication of this faithful tree"
   ],
-  "browserCI": "Original run: 36 passed, 41 target-specific skips, 3 screenshot timeouts. Updated harness retains assertions and disables continuous trace screenshots; new run pending."
+  "browserCI": "Run 41336270741: 36 passed, 41 target-specific skips, 3 desktop tests exhausted 120 seconds after rendering and animation assertions, near pause checks. Original thresholds/viewports retained. CI targets now run independently with a 300-second functional budget; new run pending."
 }
