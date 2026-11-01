@@ -33,8 +33,8 @@ export default defineConfig({
   testDir: './tests/browser',
   workers: 1,
   // Software-rendered desktop frames can take tens of seconds on hosted CI.
-  timeout: process.env.CI ? 300000 : 120000,
-  expect: { timeout: 45000 },
+  timeout: process.env.CI ? 600000 : 120000,
+  expect: { timeout: process.env.CI ? 120000 : 45000 },
   reporter: 'list',
   use: {
     browserName: 'chromium',
@@ -74,6 +74,6 @@ export default defineConfig({
           url: `http://localhost:${port}`,
           reuseExistingServer: false,
           // Software-rendered desktop frames can take tens of seconds on hosted CI.
-  timeout: process.env.CI ? 300000 : 120000,
+  timeout: process.env.CI ? 600000 : 120000,
         })),
 })

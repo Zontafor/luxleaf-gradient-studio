@@ -20,5 +20,5 @@
     "Framer/Figma host integration",
     "Fresh registry publication of this faithful tree"
   ],
-  "browserCI": "Run 41336270741: 36 passed, 41 target-specific skips, 3 desktop tests exhausted 120 seconds after rendering and animation assertions, near pause checks. Original thresholds/viewports retained. CI targets now run independently with a 300-second functional budget; new run pending."
+  "browserCI": "CI 41338705588: standalone Vue/Nuxt and Nuxt development targets passed; Vue development exhausted its 45-second screenshot assertion budget. Hosted software-rendering varies substantially. Retain assertions/viewports and use explicit CI functional budgets of 600 seconds per test and 120 seconds per assertion; this is not a performance claim. New run pending."
 }
