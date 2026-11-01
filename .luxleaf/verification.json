@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-01",
+  "scope": "local verification of pinned upstream tree",
+  "modifiedUpstreamFiles": 0,
+  "sourceFiles": 606,
+  "passedBuilds": [
+    "@shadergradient/react (JavaScript and declarations)",
+    "@shadergradient/vue (JavaScript and declarations)",
+    "ui (including controls, presets and GIF code)",
+    "@shadergradient/figma-plugin",
+    "@shadergradient/framer-plugin",
+    "example-vue-dev"
+  ],
+  "browser": "Original Vue example rendered; Universe preset changes shape, colors, speed and grain",
+  "failedBuilds": [
+    {
+      "package": "example-nextjs-dev",
+      "stage": "ESLint",
+      "details": "10 original lint errors: unused state setters, JSX text comments, explicit any. Compilation succeeded before lint failed. No checks disabled."
+    }
+  ],
+  "notVerified": [
+    "Nuxt runtime on local Node 24.2 (requires >=24.11)",
+    "Original upstream browser suite pending CI",
+    "Framer/Figma host integration",
+    "Fresh registry publication of this faithful tree"
+  ]
+}
