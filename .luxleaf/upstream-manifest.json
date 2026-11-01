@@ -615,5 +615,22 @@
     ".github/workflows/playwright.yml": ".luxleaf/upstream-workflows/playwright.yml",
     ".github/workflows/deploy.yml": ".luxleaf/upstream-workflows/deploy.yml",
     "README.md": "UPSTREAM.md"
+  },
+  "modifications": {
+    "apps/example-nextjs-dev/app/page.tsx": {
+      "original": ".luxleaf/originals/apps/example-nextjs-dev/app/page.tsx",
+      "sha256": "ba5870baabd899d7063f57b9fc761df915f362c8d4ed26c4ce851535c3666a54",
+      "reason": "Remove unused state and use the actual geometry union instead of any; preserve the displayed UI and behavior."
+    },
+    "apps/example-nextjs-dev/app/loop/page.tsx": {
+      "original": ".luxleaf/originals/apps/example-nextjs-dev/app/loop/page.tsx",
+      "sha256": "dbc3aea2c351b67354f64ec0d99a521840141d2cb3084edcff5ca360648b5436",
+      "reason": "Remove unused setter bindings and express displayed code comments as JSX strings without changing visible text."
+    },
+    "playwright.config.ts": {
+      "original": ".luxleaf/originals/playwright.config.ts",
+      "sha256": "c500b70d36fd49abe8dd6f8947b68742f53ed63f71e622b4316facb54a779bc5",
+      "reason": "Keep every visual assertion and viewport. Disable continuous trace-filmstrip GPU readbacks and allow bounded extra time on software-rendered CI; failure screenshots, DOM snapshots and source traces remain enabled."
+    }
   }
 }

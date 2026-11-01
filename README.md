@@ -92,7 +92,7 @@ pnpm --filter @shadergradient/figma-plugin plugin:build
 pnpm --filter @shadergradient/framer-plugin --filter example-vue-dev build
 ```
 
-The original [browser-suite guide](tests/browser/README.md) explains separate end-to-end checks. [Recorded build verification](.luxleaf/verification.json) and [current GitHub runs](https://github.com/Zontafor/luxleaf-gradient-studio/actions) show their scope. The unmodified Next.js example has known lint errors; its build is not claimed to pass.
+The original [browser-suite guide](tests/browser/README.md) explains separate end-to-end checks. [Recorded build verification](.luxleaf/verification.json) and [current GitHub runs](https://github.com/Zontafor/luxleaf-gradient-studio/actions) show their scope. The Next.js example now passes its production build, including lint and type checking. Two small source corrections and the browser-test configuration change are explicitly recorded in the source manifest; original file bytes are retained under `.luxleaf/originals/`.
 
 ## Source and license
 

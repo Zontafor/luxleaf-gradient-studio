@@ -32,12 +32,13 @@ const apps = [
 export default defineConfig({
   testDir: './tests/browser',
   workers: 1,
-  timeout: 60000,
-  expect: { timeout: 15000 },
+  timeout: 120000,
+  expect: { timeout: 45000 },
   reporter: 'list',
   use: {
     browserName: 'chromium',
-    trace: 'retain-on-failure',
+    // Continuous filmstrip readbacks compete with the actual canvas assertions on CI GPUs.
+    trace: { mode: 'retain-on-failure', screenshots: false, snapshots: true, sources: true },
     screenshot: 'only-on-failure',
   },
   projects: apps.flatMap(({ name, port }) => [

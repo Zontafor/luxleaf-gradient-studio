@@ -1,7 +1,7 @@
 {
   "date": "2026-11-01",
   "scope": "local verification of pinned upstream tree",
-  "modifiedUpstreamFiles": 0,
+  "modifiedUpstreamFiles": 3,
   "sourceFiles": 606,
   "passedBuilds": [
     "@shadergradient/react (JavaScript and declarations)",
@@ -9,20 +9,16 @@
     "ui (including controls, presets and GIF code)",
     "@shadergradient/figma-plugin",
     "@shadergradient/framer-plugin",
-    "example-vue-dev"
+    "example-vue-dev",
+    "example-nextjs-dev (including lint, types and static page generation)"
   ],
   "browser": "Original Vue example rendered; Universe preset changes shape, colors, speed and grain",
-  "failedBuilds": [
-    {
-      "package": "example-nextjs-dev",
-      "stage": "ESLint",
-      "details": "10 original lint errors: unused state setters, JSX text comments, explicit any. Compilation succeeded before lint failed. No checks disabled."
-    }
-  ],
+  "failedBuilds": [],
   "notVerified": [
     "Nuxt runtime on local Node 24.2 (requires >=24.11)",
     "Original upstream browser suite pending CI",
     "Framer/Figma host integration",
     "Fresh registry publication of this faithful tree"
-  ]
+  ],
+  "browserCI": "Original run: 36 passed, 41 target-specific skips, 3 screenshot timeouts. Updated harness retains assertions and disables continuous trace screenshots; new run pending."
 }

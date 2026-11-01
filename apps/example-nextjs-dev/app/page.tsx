@@ -4,8 +4,7 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import { useState } from 'react'
 
 export default function Home() {
-  const [color1, setColor1] = useState('#0D77E0')
-  const [type, setType] = useState<any>('sphere')
+  const [type, setType] = useState<'plane' | 'sphere' | 'waterPlane'>('sphere')
 
   return (
     <div className='flex flex-col'>

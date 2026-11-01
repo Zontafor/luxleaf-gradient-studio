@@ -22,4 +22,5 @@ jobs:
       - run: pnpm --filter ui build
       - run: pnpm --filter @shadergradient/figma-plugin plugin:build
       - run: pnpm --filter @shadergradient/framer-plugin --filter example-vue-dev build
+      - run: pnpm --filter example-nextjs-dev build
       - run: node .luxleaf/verify-source.mjs

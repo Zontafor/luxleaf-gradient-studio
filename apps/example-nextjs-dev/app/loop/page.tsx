@@ -11,14 +11,14 @@ export default function LoopDemo() {
   const [uSpeed, setUSpeed] = useState(0.4)
   const [uStrength, setUStrength] = useState(4)
   const [uDensity, setUDensity] = useState(1.3)
-  const [uFrequency, setUFrequency] = useState(5.5)
+  const [uFrequency] = useState(5.5)
   const [uAmplitude, setUAmplitude] = useState(0)
   const [shader, setShader] = useState<'defaults' | 'glass' | 'cosmic'>(
     'defaults'
   )
-  const [range, setRange] = useState<'enabled' | 'disabled'>('disabled')
-  const [rangeStart, setRangeStart] = useState(0)
-  const [rangeEnd, setRangeEnd] = useState(10)
+  const [range] = useState<'enabled' | 'disabled'>('disabled')
+  const [rangeStart] = useState(0)
+  const [rangeEnd] = useState(10)
   const [currentTime, setCurrentTime] = useState(0)
   const [progress, setProgress] = useState(0)
   const startTimeRef = useRef<number>(Date.now())
@@ -390,7 +390,7 @@ export default function LoopDemo() {
               <div className='bg-gray-50 p-3 rounded font-mono text-xs overflow-x-auto'>
                 <div>angle = (time / duration) × 2π</div>
                 <div>radius = 3.0 × speed</div>
-                <div className='mt-2'>// Sample 4 points on circle</div>
+                <div className='mt-2'>{'// Sample 4 points on circle'}</div>
                 <div>offset0 = (cos(angle) × radius, sin(angle) × radius)</div>
                 <div>
                   offset1 = (cos(angle+90°) × radius, sin(angle+90°) × radius)
@@ -402,13 +402,13 @@ export default function LoopDemo() {
                   offset3 = (cos(angle+270°) × radius, sin(angle+270°) × radius)
                 </div>
                 <div className='mt-2'>
-                  // Get noise at different frequencies
+                  {'// Get noise at different frequencies'}
                 </div>
                 <div>n0 = noise(position + offset0 × 1.0)</div>
                 <div>n1 = noise(position + offset1 × 1.3)</div>
                 <div>n2 = noise(position + offset2 × 0.8)</div>
                 <div>n3 = noise(position + offset3 × 1.1)</div>
-                <div className='mt-2'>// Blend with normalized weights</div>
+                <div className='mt-2'>{'// Blend with normalized weights'}</div>
                 <div>result = n0×w0 + n1×w1 + n2×w2 + n3×w3</div>
               </div>
             </div>
