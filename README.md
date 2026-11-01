@@ -2,11 +2,20 @@
 
 **Explore the full gradient renderer, React/Vue examples, editor UI and plugin source.**
 
-[Quick start](#quick-start) · [React usage](#react-usage) · [Vue usage](#vue-usage) · [Examples and packages](#examples-and-packages) · [Verification](#verification)
+[Motion videos](#motion-videos) · [Quick start](#quick-start) · [React usage](#react-usage) · [Vue usage](#vue-usage) · [Examples and packages](#examples-and-packages) · [Verification](#verification)
 
-![Original Vue example with the Universe preset selected](.luxleaf/images/vue-example.jpg)
+## Motion videos
 
-*Actual local run of the original Vue application. The original [README](UPSTREAM.md) and [animated introduction](assets/intro.gif) remain available.*
+Three LuxLeaf palette studies, recorded directly from the live Vue canvas at 960 × 540. The previews below animate; select one to open its full MP4. No generated footage or soundtrack.
+
+| Emerald Tide | Orchid Orbit | Copper Dawn |
+|---|---|---|
+| [![Emerald Tide motion](.luxleaf/media/emerald-tide.gif)](.luxleaf/media/emerald-tide.mp4) | [![Orchid Orbit motion](.luxleaf/media/orchid-orbit.gif)](.luxleaf/media/orchid-orbit.mp4) | [![Copper Dawn motion](.luxleaf/media/copper-dawn.gif)](.luxleaf/media/copper-dawn.mp4) |
+| [MP4](.luxleaf/media/emerald-tide.mp4) · [WebM](.luxleaf/media/emerald-tide.webm) | [MP4](.luxleaf/media/orchid-orbit.mp4) · [WebM](.luxleaf/media/orchid-orbit.webm) | [MP4](.luxleaf/media/copper-dawn.mp4) · [WebM](.luxleaf/media/copper-dawn.webm) |
+
+[Run the motion showcase and reproduce the recordings](.luxleaf/showcase/README.md). It includes live palette switching, pause, canvas recording and playback. GitHub may offer a download instead of inline MP4 playback; the local showcase plays the files directly.
+
+The original [README](UPSTREAM.md), [animated introduction](assets/intro.gif) and [Vue example screenshot](.luxleaf/images/vue-example.jpg) remain available.
 
 The complete restored monorepo is now on private `main`, with its original workspace names and license notices. The previously published `@zontafor/luxleaf-gradient-studio` package is a separate earlier implementation; its [historical package guide](https://github.com/Zontafor/luxleaf-gradient-studio/blob/1f46ad51c6bc60b5356b4da2607e930788b3ac8b/README.md) remains at that revision. This restoration does not publish a new registry package.
 

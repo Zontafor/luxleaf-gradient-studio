@@ -1,0 +1,74 @@
+[
+  {
+    "name": "emerald-tide",
+    "capture": "Actual LuxLeaf showcase canvas; no generated/synthetic video",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 960,
+          "height": 540,
+          "avg_frame_rate": "30/1",
+          "nb_read_frames": "327"
+        }
+      ],
+      "format": {
+        "duration": "10.900000",
+        "size": "1087922"
+      }
+    },
+    "meanPixelChangeBetweenSeconds1And9": 51.614,
+    "sha256": "58b28a72455873476d89375a59eefadcacc3fe65fd478b517752564e95127de3",
+    "audio": false
+  },
+  {
+    "name": "orchid-orbit",
+    "capture": "Actual LuxLeaf showcase canvas; no generated/synthetic video",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 960,
+          "height": 540,
+          "avg_frame_rate": "30/1",
+          "nb_read_frames": "356"
+        }
+      ],
+      "format": {
+        "duration": "11.866667",
+        "size": "1562699"
+      }
+    },
+    "meanPixelChangeBetweenSeconds1And9": 14.386,
+    "sha256": "ca27f87f21d19cc1f41f88ba13a7a903bffecd01f542d48cd697f7d49b0da6be",
+    "audio": false
+  },
+  {
+    "name": "copper-dawn",
+    "capture": "Actual LuxLeaf showcase canvas; no generated/synthetic video",
+    "video": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 960,
+          "height": 540,
+          "avg_frame_rate": "30/1",
+          "nb_read_frames": "360"
+        }
+      ],
+      "format": {
+        "duration": "12.000000",
+        "size": "1625626"
+      }
+    },
+    "meanPixelChangeBetweenSeconds1And9": 18.794,
+    "sha256": "12395c8713860cd886013684343f9e54f8afeba2233495023bf874c2ecaa0356",
+    "audio": false
+  }
+]
