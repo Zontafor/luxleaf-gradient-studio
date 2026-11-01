@@ -1,1 +1,0 @@
-License retrieved 2026-11-01 from https://raw.githubusercontent.com/google/draco/main/LICENSE
