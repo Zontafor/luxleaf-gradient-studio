@@ -1,3 +1,9 @@
+# Rebuild provenance — v0.2.0
+
+The unmodified source tree is preserved under `foundations/shadergradient`. `foundations/manifest.json` records the pinned revision and SHA-256 of every preserved file. `npm run verify:foundation` detects drift. These files retain their original authorship and licenses. Changes used at runtime are outside that reference tree and documented in source/build scripts.
+
+## Earlier research record
+
 # Private research and provenance
 
 The supplied screen recording identified `ruucm/shadergradient`. Repository metadata and documentation were reviewed on 2026-11-01 at commit `68bdd740037a11c639f8b91fd775949c71d718d0`.

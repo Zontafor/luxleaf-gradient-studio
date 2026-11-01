@@ -1,21 +1,21 @@
-# Supported scope and comparison
+# Capability matrix — v0.2.0
 
-This is a LuxLeaf product, not a renamed fork or drop-in upstream replacement. Similarity in purpose does not imply API, visual, performance or ecosystem parity.
+### Complete source reference
 
-| Capability | Implementation and evidence |
-|---|---|
-| Animated three-color gradients | Original GLSL; actual shader compilation and nonuniform output checked. |
-| Plane/orb/ribbon styles | Procedural modes with validated controls; demo supports live selection. |
-| Presets and static PNG | Strict JSON round trip and actual image/png export verified. |
-| Motion and lifecycle | Pause consistency and disposal verified; reduced-motion/visibility handlers implemented. |
-| Mesh-based 3D gradient renderer | Not implemented; current modes use a fullscreen shader. |
-| Figma, Framer, Vue integrations | Not implemented. |
-| ShaderGradient API/pixel compatibility | Not claimed; original API and shader. |
+The 606-file pinned reference tree preserves packages, apps, shaders, examples, integration sources, tests and documentation. It is licensed foundation material, not newly authored LuxLeaf code.
 
-## Release acceptance
+### Active engines
 
-A v0.1 release requires passing type checks, unit tests, production build, package-content review, a fresh package consumer import and the documented browser checks. The private repository must contain source, demo, lockfile, CI, notices and architecture documentation. A release tag must point to the reviewed source commit.
+`/react` builds the pinned 2.4.24 source with a documented query-string ESM compatibility patch. `/vue` exposes the complete 0.1.0 package. Three.js is pinned to the tested 0.180.0 version.
 
-## Before a broader production rollout
+### LuxLeaf studio
 
-Validate the host application's accessibility and authorization independently. Test the actual target Chrome, Safari, Firefox, mobile and GPU fleet. Establish measured frame-time and memory budgets under intended concurrency. Add browser checks to the organization's browser CI infrastructure. No load/SLA, cross-browser certification, independent security audit or exact upstream parity is claimed by this initial release.
+Strict versioned settings, bounded share URLs, undo/redo, interpolation, mesh/shader controls, PNG export, all twelve shader pairs at `/shaders`, a Framer host adapter, and an offline Figma PNG import integration.
+
+### Remaining host verification
+
+The Figma and Framer adapters have not been exercised in their actual editor hosts. Third-party HDR maps may require host-provided assets/network access; the demonstrated workbenches use local 3D lighting. Auxiliary type exports use published 2.4.20 definitions; current component/option types come from pinned source.
+
+## What completeness means here
+
+The scoped implementation, source distribution, tests and examples are reviewable in this repository. Preserving a full foundation tree does not mean every upstream application was reimplemented, every platform tested, or upstream authorship transferred. This release does not claim exact repository/API/visual parity or enterprise certification.

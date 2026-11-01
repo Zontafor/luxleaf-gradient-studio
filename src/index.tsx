@@ -124,3 +124,5 @@ export function GradientCanvas({
   }, [JSON.stringify(options)]);
   return <canvas {...props} ref={ref} role="img" aria-label={label} />;
 }
+
+export * from "./presets.js";

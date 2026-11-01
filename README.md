@@ -1,69 +1,66 @@
 # LuxLeaf Gradient Studio
 
-An original WebGL2 gradient renderer with three visual modes, live parameters, reusable presets and PNG export.
+React and Vue mesh gradients, twelve shader combinations, editor adapters and reversible presets.
 
-**Private v0.1.0 product release.** Original LuxLeaf code is proprietary to Michelle L. Wu. Licensed foundations retain their own rights. This is a functional initial product with an explicit supported scope; it is not a full replacement for the upstream ecosystem.
+Version **0.2.0** expands the initial workbench into a broader package. Original LuxLeaf additions are proprietary to **Michelle L. Wu**. The included licensed foundations retain their own licenses and attribution. Public source visibility does not grant a license to LuxLeaf's proprietary additions.
 
-## Run the workbench
+## Workbench
 
 ```sh
 npm ci --ignore-scripts
 npm run verify
-npm run dev -- --port 4176
+npm run verify:package
+npm run dev
 ```
 
-Use Node 22.12+ (Node 24 recommended). Open the local URL printed by Vite. The demo includes live settings, reset and preset import/export. GPU products also export PNG. Nothing is sent to a server by the demo. Vite binds to loopback by default.
+Use Node 24+. Open `/advanced.html` for the expanded studio, `/` for the compact demonstration, and `/checks-expanded.html` for real browser acceptance checks. These pages run locally. Consumer applications must supply authentication, tenancy and deployment controls appropriate to their use.
 
-## Use the private package
+## Install
 
-Build and create an installable archive:
+The scoped package is `@zontafor/luxleaf-gradient-studio`. GitHub Packages requires registry authentication even for public npm packages. Configure your own GitHub credential outside source control, then:
 
 ```sh
-npm run build
-npm pack
-# In an authorized consumer project:
-npm install /absolute/path/to/luxleaf-gradient-studio-0.1.0.tgz
+npm install @zontafor/luxleaf-gradient-studio@0.2.0 --registry=https://npm.pkg.github.com
 ```
 
-ES modules and TypeScript declarations are included. This package is intentionally marked `private: true`; no public npm publication is configured. Use one compatible React installation in the consumer. Browser components must run on the client; construction of imperative renderers requires the DOM. A preset is data, not executable code.
+GitHub Release `.tgz` attachments provide a separate installable archive. A release attachment alone is not proof of registry publication. See [release procedure](docs/RELEASING.md) for verification commands and the distinction between repository and package visibility.
 
-```tsx
-import { GradientCanvas } from '@luxleaf/gradient-studio';
+## Package entry points
 
-export function BrandBackground() {
-  return <GradientCanvas
-    label="LuxLeaf green and gold gradient"
-    options={{ shape: 'ribbon', animate: false }}
-    style={{ width: '100%', height: 420 }}
-  />;
-}
-```
-
-## API
-
-| Export | Contract |
+| Import suffix | Distributed implementation |
 |---|---|
-| `GradientCanvas` | React canvas component; `options`, accessible `label`, `onReady(renderer or null)` and canvas attributes. |
-| `new Gradient(canvas, options)` | Imperative renderer; construct in the browser after the canvas is mounted. |
-| `update(partial)` | Merge and validate options before updating uniforms. |
-| `exportPNG()` | Promise of image/png Blob; rejects when graphics are unavailable or disposed. |
-| `destroy()` | Idempotent removal of listeners, observers, frame callbacks and GPU resources. |
-| `surface.status` | `ready`, `fallback`, `lost`, `disposed`; also reflected in canvas `data-renderer`. |
-| `validate`, `serialize`, `deserialize`, `defaults` | Strict configuration boundary and JSON preset helpers. |
+| `.` | `./dist/index.js` |
+| `./react` | `./dist/react-engine.js` |
+| `./vue` | `./dist/vue.js` |
+| `./framer` | `./dist/framer.js` |
+| `./shaders` | `./dist/shader-sources.js` |
 
-`GradientOptions`: exactly three six-digit hex colors, speed (0–2), scale (0.2–8), warp (0–2), grain (0–0.2), shape (`plane`, `orb`, `ribbon`), animate (boolean). Shapes are procedural visual modes in a fullscreen shader, not separate 3D meshes. Give the canvas an explicit CSS width and height. React cleans up on unmount; imperative consumers must call `destroy()`.
+## Implemented scope
 
-All numeric fields must be finite and in range. Unknown configuration keys are rejected, and JSON input is limited to 16 KiB. Presets use the v0.1 schema; there is no version-migration promise yet. Exported defaults should be treated as immutable.
+### Complete source reference
 
-## Quality and operations
+The 606-file pinned reference tree preserves packages, apps, shaders, examples, integration sources, tests and documentation. It is licensed foundation material, not newly authored LuxLeaf code.
 
-`npm run verify` checks TypeScript, runs 6 unit tests and builds both library and demo. `/checks.html` exposes 7 actual browser integration assertions; open it in the local server and press **Run checks**. Browser checks are manual and are not represented as automated CI coverage. See [validation](docs/VALIDATION.md) for evidence and limits.
+### Active engines
 
+`/react` builds the pinned 2.4.24 source with a documented query-string ESM compatibility patch. `/vue` exposes the complete 0.1.0 package. Three.js is pinned to the tested 0.180.0 version.
+
+### LuxLeaf studio
+
+Strict versioned settings, bounded share URLs, undo/redo, interpolation, mesh/shader controls, PNG export, all twelve shader pairs at `/shaders`, a Framer host adapter, and an offline Figma PNG import integration.
+
+### Remaining host verification
+
+The Figma and Framer adapters have not been exercised in their actual editor hosts. Third-party HDR maps may require host-provided assets/network access; the demonstrated workbenches use local 3D lighting. Auxiliary type exports use published 2.4.20 definitions; current component/option types come from pinned source.
+
+## Verification
+
+The current suite includes **12 unit/integration tests**. The expanded browser page contains **28 assertions**, run separately from headless CI. These counts describe specific checks, not proof of exact feature, pixel or performance parity with another product. See [validation](docs/VALIDATION.md) for evidence and known limits.
+
+The repository includes source, tests, runnable examples, build configuration, architecture notes, dependency notices and release workflows. The npm archive includes source and examples alongside JavaScript and declarations. It intentionally excludes installed dependencies, credentials and local user media.
+
+- [Capability matrix](docs/CAPABILITIES.md)
 - [Architecture and lifecycle](docs/ARCHITECTURE.md)
-- [Capability comparison and known gaps](docs/CAPABILITIES.md)
-- [Private release procedure](docs/RELEASING.md)
-- [Research and provenance](docs/PROVENANCE.md)
+- [Provenance](docs/PROVENANCE.md)
 - [Third-party notices](THIRD_PARTY_NOTICES.md)
-- [Security reporting and data handling](SECURITY.md)
-
-The demo is a workbench for this package. Authentication, tenancy, persistence, payments and deployment infrastructure belong to the integrating application and are not supplied by this browser library.
+- [Security and supported deployment](SECURITY.md)
